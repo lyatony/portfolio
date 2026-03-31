@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfolio | Leticia Cajaty</title>
+    <style>
+        body { 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            color: #000000; 
+            background-color: #ffffff;
+            transition: 0.3s;
+        }
+
+        header { background: #5793c4; color: #fff; padding: 1rem; text-align: center; }
+        section { padding: 2rem; max-width: 800px; margin: auto; }
+        .hero { text-align: center; background: #f4f4f4; }
+        .projeto-card { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+        footer { text-align: center; padding: 2rem; background: #5793c4; color: #fff; }
+
+        /* MODO ESCURO */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark-mode .hero {
+            background: #1e1e1e;
+        }
+
+        .dark-mode .projeto-card {
+            border: 1px solid #444;
+        }
+
+        /* BOTÃO */
+        #toggleBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleBtn">🌙</button>
+
+    <header>
+        <h1>Leticia Cajaty Baron</h1>
+        <p>Estudante do 3º ano EM Técnico em Desenvolvimento de Sistemas</p>
+    </header>
+
+    <section class="hero">
+        <h2>Olá, eu sou a Letícia 👋</h2>
+        <p>Nasci em Embu das Artes - SP, e morei em Fortaleza - CE até meus 14 anos, agora resido em São Paulo - SP. Tenho conhecimento básico de Python e HTML. Estou em busca de um trabalho Jovem Aprendiz para crescer profissionalmente e como pessoa. Tenho ambição e planejo me formar na área de Ciências Biológicas.</p>
+    </section>
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projeto-card">
+            <h3>TCC do Técnico em Desenvolvimento de Sistemas</h3>
+            <p>Um jogo para crianças com temática em leitura - Em Andamento</p>
+            <h3> Ensino Fundamental 2</h3>
+            <p> Feira de Matématica - 9º </p>
+            <p> Feira de Ciências - 9º </p>
+            <p> Feira Cultural - 8º e 9º </p>
+            <a href="#">Ver no GitHub</a>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Vamos conversar?</h2>
+        <p>E-mail: lyacajaty@gmail.com</p>
+        <p>
+            <a href="https://br.linkedin.com/in/leticia-cajaty-baron-54b2923b9" target="_blank">Meu LinkedIn</a> | <a href="https://github.com/lyatony" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Criado por Letícia Cajaty Baron</p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("toggleBtn");
+
+        button.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                button.textContent = "🌞";
+            } else {
+                button.textContent = "🌙";
+            }
+        });
+    </script>
+
+</body>
+</html>
